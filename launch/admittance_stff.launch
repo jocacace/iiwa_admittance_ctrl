@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+
+
+<launch>
+
+	<node pkg="iiwa_admittance_ctrl_v0" type="admittance_stiffness" name="admittance_stiffness" output="screen">
+		<param name="stream_trajectory" type="bool" value="true" />	
+		<param name="ws_size" value="0.15" type="double" />
+		<param name="k" value="0" type="double" />
+		<param name="check_sspace" value="0.005" type="double" />
+	</node>
+</launch>

@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+
+
+<launch>
+	<node pkg="iiwa_admittance_ctrl" name="iiwa_admittance_ctrl" type="iiwa_admittance_ctrl" output="screen">
+
+		<param name="mp" value="0.5" type="double" />
+		<param name="dp" value="150.0" type="double" />
+		<param name="kp" value="0.0" type="double" />
+
+		<param name="mo" value="0.8" type="double" />
+		<param name="do" value="8.0" type="double" />
+		<param name="ko" value="0.0" type="double" />
+
+		<param name="bb_z_min" value="0.30" type="double" />
+
+		<!--optimal real robot rate:: 250/350 -->
+		<param name="rate" value="300" type="int" />
+			
+
+		<param name="goto_initial_pos" value="false" type="bool" />
+		<param name="x_i" value="0.30" type="double" />
+		<param name="y_i" value="-0.35" type="double" />
+		<param name="z_i" value="0.65" type="double" />
+	
+
+		<!--topic names-->
+		<param name="fts_data" type="string" value="fts_data" />
+		<param name="topic_ctrl" type="string" value="/iiwa/command/CartesianPose" />
+		<!--
+		<param name="topic_ctrl" type="string" value="/iiwa/cartesian_ctrl" />
+		-->
+	</node>
+</launch>
+
